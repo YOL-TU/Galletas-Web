@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Galletyas YOL-TU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🍪 Galletyas YOL-TU</h1>
+        <nav>
+            <a href="#about">¿Qué es?</a>
+            <a href="#shop">Tienda</a>
+            <a href="#contact">Contacto</a>
+            <a href="#cart">🛒 Carrito (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>La cucharilla comestible</h2>
+        <p>Hecha de galleta de sabor neutro, ideal para café, postres o té. Sostenible, sabrosa y ¡sin residuos!</p>
+        <img src="images/spoon.png" alt="Cucharilla ecológica" />
+    </section>
+
+    <section id="shop">
+        <h2>Tienda</h2>
+        <div class="products">
+            <div class="product">
+                <img src="images/pack1.png" alt="Pack 10u">
+                <h3>Pack 10 cucharillas</h3>
+                <p>€3.50</p>
+                <button onclick="addToCart('Pack 10 cucharillas', 3.5)">Añadir</button>
+            </div>
+            <div class="product">
+                <img src="images/pack2.png" alt="Pack 50u">
+                <h3>Pack 50 cucharillas</h3>
+                <p>€15.00</p>
+                <button onclick="addToCart('Pack 50 cucharillas', 15)">Añadir</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Carrito</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: €<span id="total">0.00</span></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo" required />
+            <textarea placeholder="Mensaje..."></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Galletyas YOL-TU – Eco dulzura para tu café</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
